@@ -26,7 +26,7 @@ public:
   void expand(const std::vector<double> &action_priors);
   void backup(double leaf_value);
 
-  double get_value(double c_puct, double c_virtual_loss) const;
+  double get_value(double c_puct, double c_virtual_loss, unsigned int sum_n_visited) const;
   inline bool get_is_leaf() const { return this->is_leaf; }
 
 private:
